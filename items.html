@@ -1,0 +1,32 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Online_Shop.html') }}">
+
+    </head>
+    <body>
+<div class="items">
+<form method="POST">
+<label>Product</label>
+<select ID="CHILD" class="form-control" name="product">            
+    <option value=""></option>
+    <option value="Badminton Racket">Badminton Racket</option>
+    <option value="Shuttlecock">Shuttlecock</option>
+    <option value="Football">Football</option>
+</select>
+<button type="button" class="btn btn-primary" href="{{ url_for('Online_Shop') }}" id="btn2">Confirm</button>
+
+<script>
+$(document).ready(function(){
+  $("#btn2").click(function(){
+    alert("Successfully purchase! " + $("#test").text());
+  });
+});  
+</script>
+    <p id="test"></p>
+    </body>
+    </html>
